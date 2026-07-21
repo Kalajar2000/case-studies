@@ -4,21 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Santiago Correal — Creative Strategist | Meta / DTC Direct Response</title>
-<meta name="description" content="Direct-response creative strategy for DTC supplement, health and wellness brands. €2.2M net sales at 1.9 blended ROAS across 53 campaigns. Angles, hooks, UGC scripts and briefs.">
+<meta name="description" content="Direct-response creative strategy for DTC supplement, health and wellness brands. €2.2M net sales at 1.9 ROAS across 53 campaigns. Angles, hooks, UGC scripts and briefs.">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js"></script>
 <style>
-:root{
-  color-scheme: light;
-  --ink:#111418; --body:#3d4550; --mute:#6b7280; --line:#e6e8ec;
-  --bg:#ffffff; --soft:#f7f8fa; --accent:#0f766e; --accent-soft:#ecfdf5;
-  --warn:#b45309; --warn-soft:#fffbeb;
-}
+:root{color-scheme:light;--ink:#111418;--body:#3d4550;--mute:#6b7280;--line:#e6e8ec;
+  --bg:#fff;--soft:#f7f8fa;--accent:#0f766e;--accent-soft:#ecfdf5;--warn-soft:#fffbeb}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--body);
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
-.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
 h1,h2,h3{color:var(--ink);letter-spacing:-0.02em;margin:0}
 h1{font-size:38px;line-height:1.15;font-weight:700}
 h2{font-size:13px;text-transform:uppercase;letter-spacing:.09em;color:var(--mute);font-weight:700;margin:0 0 20px}
@@ -28,15 +24,18 @@ a{color:var(--accent)}
 
 header{border-bottom:1px solid var(--line);padding:56px 0 42px}
 .eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.09em;color:var(--accent);font-weight:700;margin-bottom:14px}
-.lede{font-size:19px;line-height:1.55;max-width:680px;margin:18px 0 0}
+.lede{font-size:19px;line-height:1.55;max-width:700px;margin:18px 0 0}
 .meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:24px;font-size:14px;color:var(--mute)}
 .meta strong{color:var(--ink)}
-.headline-nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:32px}
+.headline-nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:32px}
 .num{border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--soft)}
-.num .v{font-size:32px;font-weight:700;color:var(--ink);letter-spacing:-0.03em;line-height:1.1}
+.num .v{font-size:30px;font-weight:700;color:var(--ink);letter-spacing:-0.03em;line-height:1.1}
 .num .k{font-size:13px;color:var(--mute);margin-top:6px}
+.pdfbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-top:26px}
+.pdfbar a{font-weight:650;text-decoration:none}
+.pdfbar span{font-size:13.5px;color:var(--mute)}
 
-nav.jump{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+nav.jump{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:20}
 nav.jump .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:12px;padding-bottom:12px}
 nav.jump a{font-size:13px;font-weight:600;color:var(--body);text-decoration:none;padding:6px 12px;border-radius:999px;white-space:nowrap;border:1px solid transparent}
 nav.jump a:hover{background:var(--soft);border-color:var(--line)}
@@ -44,25 +43,32 @@ nav.jump a:hover{background:var(--soft);border-color:var(--line)}
 section{padding:54px 0;border-bottom:1px solid var(--line)}
 section:last-of-type{border-bottom:none}
 
-.case{border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:22px;background:#fff;overflow:hidden}
+.case{border:1px solid var(--line);border-radius:16px;margin-bottom:26px;background:#fff;overflow:hidden}
 .case.flag{border-color:#bfe3dd}
-.case-grid{display:grid;grid-template-columns:340px 1fr;gap:0}
-.case-media{background:#eef1f4;position:relative;display:flex;align-items:flex-start;justify-content:center;padding:20px}
-.case-media img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.10);position:sticky;top:78px}
-.case-body{padding:26px}
-.case.flag .case-body{background:linear-gradient(180deg,var(--accent-soft) 0%,#fff 130px)}
+.case-head{padding:26px 26px 0}
+.case.flag .case-head{background:linear-gradient(180deg,var(--accent-soft) 0%,#fff 140px)}
 .case-top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap;margin-bottom:8px}
-.cat{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:999px;white-space:nowrap}
-.stats{display:flex;gap:26px;flex-wrap:wrap;margin:18px 0;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.stat .v{font-size:21px;font-weight:700;color:var(--ink);letter-spacing:-0.02em}
-.stat .k{font-size:11.5px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em}
-.mech{background:var(--soft);border-left:3px solid var(--accent);padding:14px 16px;border-radius:0 8px 8px 0;margin-top:16px;font-size:15px}
+.cat{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.role{font-size:12.5px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:10px}
+.case-body{padding:0 26px 8px;max-width:820px}
+.stats{display:flex;gap:24px;flex-wrap:wrap;margin:6px 26px 20px;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat .v{font-size:19px;font-weight:700;color:var(--ink);letter-spacing:-0.02em}
+.stat .k{font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em}
+.mech{background:var(--soft);border-left:3px solid var(--accent);padding:14px 16px;border-radius:0 8px 8px 0;margin:0 26px 22px;font-size:15px;max-width:820px}
 .mech b{color:var(--ink)}
-.imgnote{font-size:12px;color:var(--mute);padding:9px 26px;background:var(--soft);border-top:1px solid var(--line)}
+
+.media{display:grid;gap:14px;padding:0 26px 22px}
+.media.two{grid-template-columns:1fr 1fr}
+.media.three{grid-template-columns:repeat(3,1fr)}
+.m{background:#eef1f4;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.m img,.m video{display:block;width:100%;height:auto;background:#eef1f4}
+.m .cap{font-size:12px;color:var(--mute);padding:9px 13px;background:#fff;border-top:1px solid var(--line);line-height:1.45}
+.m .tag{position:absolute;top:10px;left:10px;background:rgba(17,20,24,.82);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px}
+.mwrap{position:relative}
+@media(max-width:860px){.media.two,.media.three{grid-template-columns:1fr}h1{font-size:30px}}
 
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:820px){.grid2{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr}.case-media{min-height:220px}h1{font-size:30px}}
-
+@media(max-width:860px){.grid2{grid-template-columns:1fr}}
 .chart-box{border:1px solid var(--line);border-radius:12px;padding:20px;background:#fff;height:290px;position:relative}
 .chart-cap{font-size:13px;color:var(--mute);margin-top:12px}
 ol.process{counter-reset:s;list-style:none;padding:0;margin:0}
@@ -78,9 +84,6 @@ ol.process b{color:var(--ink)}
 .cta .btn{display:inline-block;margin-top:18px;background:#fff;color:var(--ink);font-weight:650;font-size:15px;text-decoration:none;padding:12px 22px;border-radius:10px}
 .cta .alt{color:#9aa3ae;font-size:14px;margin-top:14px}
 footer{padding:34px 0;color:var(--mute);font-size:13px}
-.pdfbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-top:26px}
-.pdfbar a{font-weight:650;text-decoration:none}
-.pdfbar span{font-size:13.5px;color:var(--mute)}
 </style>
 </head>
 <body>
@@ -97,9 +100,9 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
     </div>
     <div class="headline-nums">
       <div class="num"><div class="v">&euro;2.2M</div><div class="k">net sales, women's supplement brand (DE)</div></div>
-      <div class="num"><div class="v">1.9&times;</div><div class="k">blended ROAS across 53 campaigns</div></div>
-      <div class="num"><div class="v">$1.2M</div><div class="k">net sales, men's sexual-health brand</div></div>
-      <div class="num"><div class="v">2.1&times;</div><div class="k">blended ROAS across 11 campaigns</div></div>
+      <div class="num"><div class="v">1.9&times;</div><div class="k">ROAS on a subscription model, 53 campaigns</div></div>
+      <div class="num"><div class="v">&euro;362K</div><div class="k">Meta spend managed on that account</div></div>
+      <div class="num"><div class="v">30&ndash;40%</div><div class="k">hook rate the creative system targets</div></div>
     </div>
     <div class="pdfbar">
       <a href="Santiago-Correal-Case-Studies.pdf">Download the full case-study PDF &rarr;</a>
@@ -127,92 +130,134 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
   <h2>Supplements, vitamins &amp; nutrition</h2>
 
   <div class="case flag">
-    <div class="case-grid">
-      <div class="case-media"><img src="womens-supplement-de.jpg" alt="Shopify analytics dashboard showing total sales, returning customer rate 17.49% and 34,915 orders fulfilled, in EUR"></div>
-      <div class="case-body">
-        <div class="case-top"><h3>Women's Supplement Brand &mdash; Germany</h3><span class="cat">Flagship</span></div>
-        <p>DTC creative strategy for a women's supplement brand selling into the German market. This is the largest engagement in the portfolio and the one that best describes how I work, because the category made the constraint impossible to ignore: the ad account was suspended repeatedly over the life of the work, so every angle had to be written to survive review as well as convert.</p>
-        <p>Fifty-three campaigns were run. The creative pipeline ran statics and UGC video in parallel against the same angle set, which meant a winning message could be identified separately from the format carrying it. Angles were mapped against awareness and sophistication stage before anything was designed, so each test round answered a question rather than just producing assets.</p>
-        <div class="stats">
-          <div class="stat"><div class="v">&euro;2.2M</div><div class="k">Net sales</div></div>
-          <div class="stat"><div class="v">1.9&times;</div><div class="k">Blended ROAS</div></div>
-          <div class="stat"><div class="v">53</div><div class="k">Campaigns</div></div>
-          <div class="stat"><div class="v">DE</div><div class="k">Market</div></div>
-        </div>
-        <div class="mech"><b>Why it worked:</b> writing inside structure-and-function claim language from the first draft, rather than trying to soften a non-compliant hook afterwards. Compliant angles ship, stay live and accumulate learning. Aggressive ones get pulled, and every pull resets the account's standing with review.</div>
+    <div class="case-head">
+      <div class="case-top"><h3>Women's Supplement Brand &mdash; Germany</h3><span class="cat">Flagship</span></div>
+      <div class="role">My role &middot; Creative Strategist</div>
+    </div>
+    <div class="case-body">
+      <p>A women's supplement brand launching in Germany in a sensitive niche, where repeated Meta ad-account suspensions limited what could run. From day one I built a compliant, UGC-driven creative system: structured testing, clear angles, and policy-safe messaging that still sold. The brand passed &euro;2.2M in net sales.</p>
+      <p>Fifty-three campaigns were run across roughly &euro;362K of Meta spend. Statics and UGC video went out in parallel against the same angle set, so a winning message could be identified separately from the format carrying it, and angles were mapped against awareness and sophistication stage before anything was designed.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="v">&euro;2.2M</div><div class="k">Net sales</div></div>
+      <div class="stat"><div class="v">1.9&times;</div><div class="k">ROAS (subscription)</div></div>
+      <div class="stat"><div class="v">53</div><div class="k">Campaigns</div></div>
+      <div class="stat"><div class="v">30&ndash;40%</div><div class="k">Hook rate</div></div>
+      <div class="stat"><div class="v">8&ndash;12%</div><div class="k">Hold rate</div></div>
+      <div class="stat"><div class="v">&euro;1.80&ndash;2.20</div><div class="k">CPC</div></div>
+    </div>
+    <div class="mech"><b>Why it worked:</b> writing inside structure-and-function claim language from the first draft, rather than trying to soften a non-compliant hook afterwards. Compliant angles ship, stay live and accumulate learning. Aggressive ones get pulled, and every pull resets the account's standing with review.</div>
+    <div class="media">
+      <div class="m"><div class="mwrap"><img src="assets/hero-womens-supplement.jpg" alt="Meta Ads Manager campaign table showing 53 campaigns, EUR362,191.26 total spent, 1.95 average purchase ROAS, hook rate and hold rate columns"><span class="tag">Ads Manager</span></div>
+        <div class="cap">Account view across the engagement: 53 campaigns, &euro;362,191.26 spent, 1.95 average purchase ROAS, 19.59% average hook rate, 4.32% hold rate, 1.44% CTR, &euro;1.97 CPC. The &euro;2.2M is brand net sales over the same period on a subscription model, not a single-campaign figure.</div>
       </div>
     </div>
-    <div class="imgnote">Shown: store analytics over the engagement &mdash; 34,915 orders fulfilled, 17.49% returning customer rate, reported in EUR.</div>
   </div>
 
   <div class="case">
-    <div class="case-grid">
-      <div class="case-media"><img src="functional-mushroom.jpg" alt="Advertorial header reading Why Extraction Is Everything, estimated reading time 3 minutes, with mushroom illustration"></div>
-      <div class="case-body">
-        <h3>Functional Mushroom Supplement</h3>
-        <p>Advertorial creative for a category where nearly every competitor advertises the same ingredient list. The differentiator chosen was <b>extraction quality</b> &mdash; a specification most brands bury in the FAQ &mdash; and the mechanism of the product became the story.</p>
-        <p>Advertorial was the right format because the argument needs room. A 15-second video cannot explain why extraction ratio changes what the customer actually absorbs; a long-form editorial can, and it gives the ad something to say that a competitor cannot copy inside a week.</p>
-        <div class="mech"><b>Why it worked:</b> in a commoditised category, the specification is the angle. Whoever explains the mechanism first owns it.</div>
-      </div>
+    <div class="case-head"><h3>Nootropic Focus Drink</h3><div class="role">My role &middot; Creative Strategist</div></div>
+    <div class="case-body">
+      <p>A natural nootropic focus drink in a crowded functional-beverage market. The job: make a functional drink unmissable in-feed and pull a skeptical, productivity-minded buyer. I built around a blunt thumb-stop hook, a clear product intro, and a comparison angle vs coffee and energy drinks, anchored by a strong star-rating proof point and a BuzzFeed-style founder video for warm audiences.</p>
+      <p>Because the buyer is sceptical of the category rather than the brand, the system leans on borrowed credibility and side-by-side comparison instead of claiming an outcome directly.</p>
     </div>
-    <div class="imgnote">Shown: advertorial opener. The headline commits to a mechanism claim and sets a reading-time expectation before the pitch.</div>
+    <div class="stats">
+      <div class="stat"><div class="v">30%+</div><div class="k">Hook rate target</div></div>
+      <div class="stat"><div class="v">8&ndash;12%</div><div class="k">Hold rate target</div></div>
+      <div class="stat"><div class="v">1.5%+</div><div class="k">CTR target</div></div>
+      <div class="stat"><div class="v">3:2:2</div><div class="k">Hook / body / CTA testing</div></div>
+    </div>
+    <div class="mech"><b>The angle:</b> the incumbent is coffee, not another nootropic. So the creative argues on calories, fat and dose, and borrows authority from where the target buyer already works.</div>
+    <div class="media three">
+      <div class="m"><div class="mwrap"><video src="assets/v-nootropic-office.mp4" poster="assets/p-nootropic-office.jpg" controls preload="none" playsinline></video><span class="tag">Video</span></div>
+        <div class="cap">Borrowed-authority hook: "People who work at Goldman Sachs, Google, Mercedes, WeWork drink this to be productive."</div></div>
+      <div class="m"><div class="mwrap"><video src="assets/v-nootropic-energy.mp4" poster="assets/p-nootropic-energy.jpg" controls preload="none" playsinline></video><span class="tag">Video</span></div>
+        <div class="cap">Comparison angle against energy drinks, framed as how-to rather than as a pitch.</div></div>
+      <div class="m"><div class="mwrap"><video src="assets/v-nootropic-jar.mp4" poster="assets/p-nootropic-jar.jpg" controls preload="none" playsinline></video><span class="tag">Video</span></div>
+        <div class="cap">Product-intro opener for cold traffic: name the category, then the product, before any benefit claim.</div></div>
+    </div>
   </div>
 
   <div class="case">
-    <div class="case-grid">
-      <div class="case-media"><img src="nootropic-focus.jpg" alt="Nootropic focus drink comparison static with 100% natural, zero fat, 1-2 bottles per day versus 360 kcal, 10.2g fat, 3-5 cups per day"></div>
-      <div class="case-body">
-        <h3>Nootropic Focus Drink</h3>
-        <p>DTC performance creative for Meta. Statics and UGC video developed in parallel against a shared angle set, so format and message could be evaluated independently rather than confounded inside a single test.</p>
-        <div class="mech"><b>The angle:</b> side-by-side against the drink the customer already has every morning. Coffee is the incumbent, so the static argues on calories, fat and dose rather than on focus as an abstract benefit.</div>
-      </div>
+    <div class="case-head"><h3>Functional Mushroom Supplement</h3><div class="role">My role &middot; Creative Strategist</div></div>
+    <div class="case-body">
+      <p>A functional-mushroom supplement in a crowded category where "why us" is everything. I led an advertorial/listicle creative system built on one differentiator, extraction quality &mdash; "Why extraction is everything" &mdash; with a three-minute editorial read that pre-sells the science, plus UGC for the focus product to carry everyday-use proof.</p>
+      <p>Advertorial was the right format because the argument needs room. A 15-second video cannot explain why extraction ratio changes what the customer actually absorbs; a long-form editorial can, and it gives the ad something to say that a competitor cannot copy inside a week.</p>
     </div>
-    <div class="imgnote">Shown: comparison static built to be legible at thumbnail size in-feed, with the numbers doing the persuading.</div>
+    <div class="stats">
+      <div class="stat"><div class="v">30%+</div><div class="k">Hook rate target</div></div>
+      <div class="stat"><div class="v">10%+</div><div class="k">Hold rate target</div></div>
+      <div class="stat"><div class="v">1.5%+</div><div class="k">CTR advertorial &rarr; PDP</div></div>
+    </div>
+    <div class="mech"><b>Why it worked:</b> in a commoditised category, the specification is the angle. Whoever explains the mechanism first owns it. Audience warmed via education before the offer.</div>
+    <div class="media">
+      <div class="m"><div class="mwrap"><img src="assets/hero-mushroom.jpg" alt="Advertorial page headed Why Extraction Is Everything with a three minute estimated reading time"><span class="tag">Advertorial</span></div>
+        <div class="cap">The advertorial opener. The headline commits to a mechanism claim and sets a reading-time expectation before the pitch arrives.</div></div>
+    </div>
   </div>
 </section>
 
 <section id="mens-health">
   <h2>Men's health &amp; restricted categories</h2>
   <div class="case flag">
-    <div class="case-grid">
-      <div class="case-media"><img src="mens-sexual-health.jpg" alt="UGC talking-head video still with caption reading DON'T get this product"></div>
-      <div class="case-body">
-        <div class="case-top"><h3>Men's Sexual-Health Supplement</h3><span class="cat">Compliance</span></div>
-        <p>Compliant direct-response creative for a category most strategists will not take on, because the failure mode is not a bad CPA. It is a dead ad account, and with it every audience signal and learning the account had accumulated.</p>
-        <p>Every hook was written to clear review on the first pass. That constraint shapes the copy: you cannot promise an outcome, so you sell the situation and the identity around it instead. Eleven campaigns were run to $1.2M in net sales at 2.1&times; blended.</p>
-        <div class="stats">
-          <div class="stat"><div class="v">$1.2M</div><div class="k">Net sales</div></div>
-          <div class="stat"><div class="v">2.1&times;</div><div class="k">Blended ROAS</div></div>
-          <div class="stat"><div class="v">11</div><div class="k">Campaigns</div></div>
-        </div>
-        <div class="mech"><b>Why it worked:</b> the constraint became the creative brief. Working inside FTC and FDA claim rules forces you to sell through situation and identity rather than a promise, which is more durable copy in any category.</div>
-      </div>
+    <div class="case-head">
+      <div class="case-top"><h3>Men's Sexual-Health Supplement</h3><span class="cat">Compliance</span></div>
+      <div class="role">My role &middot; Creative Strategist</div>
     </div>
-    <div class="imgnote">Shown: a negative-hook UGC opener. "Don't get this product" stops the scroll without making a product claim &mdash; which is exactly what makes it survivable in a restricted category.</div>
+    <div class="case-body">
+      <p>A men's ED / sexual-health supplement in a high-sensitivity, heavily moderated category. The strategy: a problem-aware, disarming creative system. A reverse-psychology video hook to beat ad fatigue and stigma, plus a character-led static to open the conversation without tripping policy. Messaging written around structure-and-function framing to keep the account safe.</p>
+      <p>The failure mode here is not a bad CPA. It is a dead ad account, and with it every audience signal the account had accumulated. No explicit before/afters, no in-platform disease claims.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="v">30%+</div><div class="k">Hook rate target</div></div>
+      <div class="stat"><div class="v">10%+</div><div class="k">Hold rate target</div></div>
+      <div class="stat"><div class="v">1.5%+</div><div class="k">CTR to advertorial</div></div>
+    </div>
+    <div class="mech"><b>Why it worked:</b> the constraint became the creative brief. Working inside FTC and FDA claim rules forces you to sell through situation and identity rather than a promise, which is more durable copy in any category.</div>
+    <div class="media two">
+      <div class="m"><div class="mwrap"><video src="assets/v-mens-health.mp4" poster="assets/p-mens-health.jpg" controls preload="none" playsinline></video><span class="tag">Video</span></div>
+        <div class="cap">The reverse-psychology hook: "3 Reasons Why I HATE This ED Solution." It stops the scroll and disarms the stigma without making a product claim in the first frame.</div></div>
+      <div class="m"><div class="mwrap"><img src="assets/hero-mens-health.jpg" alt="Character-led static ad with the headline Cure ED before it's too late"><span class="tag">Static</span></div>
+        <div class="cap">The character-led static. An illustrated character opens a conversation the category usually can't have in-feed.</div></div>
+    </div>
   </div>
-  <p style="font-size:15px;color:var(--mute);max-width:760px">If your product touches health claims, minors, detox, or anything Meta treats as sensitive, this is the work that matters more than the ROAS number above it. Ask me about it directly.</p>
+  <p style="font-size:15px;color:var(--mute);max-width:780px">If your product touches health claims, minors, detox, or anything Meta treats as sensitive, this is the work that matters more than the ROAS number above it. Ask me about it directly.</p>
 </section>
 
 <section id="womens-health">
   <h2>Women's health</h2>
-  <div class="grid2">
-    <div class="case">
-      <div class="case-media"><img src="period-pain-livia.jpg" alt="Livia drug-free period pain device worn on the abdomen with caption you don't have to experience such pain"></div>
-      <div class="case-body">
-        <h3>Drug-Free Period Pain Device</h3>
-        <p>UGC and comparison creative for a wearable device treating period pain without medication. The creative was built on comparison framing against the painkiller the customer already reaches for.</p>
-        <div class="mech"><b>The angle:</b> the competitor is not another device, it is ibuprofen. The ad has to beat the habit, not the category.</div>
-      </div>
-      <div class="imgnote">Shown: product-in-use UGC. The device is demonstrated on-body before any claim is made.</div>
+
+  <div class="case">
+    <div class="case-head"><h3>Drug-Free Period Pain Device</h3><div class="role">My role &middot; Creative Strategist</div></div>
+    <div class="case-body">
+      <p>A drug-free device for period and endometriosis pain. The audience is in real pain and tired of being dismissed, so the creative leads with empathy and proof. I built a UGC + comparison system: real users wearing the device, a direct "you don't have to experience such pain" message, and a comparison/sale angle to convert the considered, high-intent shopper.</p>
     </div>
-    <div class="case">
-      <div class="case-media"><img src="first-period-reddrop.jpg" alt="First-period care static reading DON'T let your daughter feel unprepared like I did, with product benefit icons"></div>
-      <div class="case-body">
-        <h3>First-Period Care Brand</h3>
-        <p>Emotional direct-response creative. The structural problem here is that the buyer is a parent and the user is a child, and the two need different promises inside a single ad.</p>
-        <div class="mech"><b>The angle:</b> written to the parent's fear of getting it wrong, not to the product's feature list.</div>
-      </div>
-      <div class="imgnote">Shown: the headline speaks to the mother's memory; the icon row underneath answers the practical objection.</div>
+    <div class="stats">
+      <div class="stat"><div class="v">30%+</div><div class="k">Hook rate target</div></div>
+      <div class="stat"><div class="v">10%+</div><div class="k">Hold rate target</div></div>
+      <div class="stat"><div class="v">1.5&ndash;2%</div><div class="k">CTR target</div></div>
+    </div>
+    <div class="mech"><b>The angle:</b> the competitor is not another device, it is ibuprofen. The ad has to beat the habit, not the category. Comparison plus offer built to lift CVR on a considered purchase.</div>
+    <div class="media">
+      <div class="m"><div class="mwrap"><img src="assets/hero-period-pain.jpg" alt="UGC creative showing the Livia device worn on the abdomen with the caption you don't have to experience such pain"><span class="tag">UGC</span></div>
+        <div class="cap">Product-in-use UGC. The device is demonstrated on-body before any claim is made, which is what makes the empathy line land instead of reading as marketing.</div></div>
+    </div>
+  </div>
+
+  <div class="case">
+    <div class="case-head"><h3>First-Period Care Brand</h3><div class="role">My role &middot; Creative Strategist</div></div>
+    <div class="case-body">
+      <p>A first-period care brand making products for young girls, sold to moms. This is an emotional purchase, not a spec sheet. I led a parent-targeted system built on an empathy hook &mdash; "Don't let your daughter feel unprepared like I did" &mdash; product reassurance (absorbs like 4 tampons, odor-locking, right size for first-timers), and a money-back guarantee to de-risk the first order.</p>
+      <p>The structural problem is that the buyer is a parent and the user is a child, and the two need different promises inside a single ad.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="v">30%+</div><div class="k">Hook rate target</div></div>
+      <div class="stat"><div class="v">10%+</div><div class="k">Hold rate target</div></div>
+      <div class="stat"><div class="v">1.5%+</div><div class="k">CTR target</div></div>
+    </div>
+    <div class="mech"><b>The angle:</b> written to the parent's fear of getting it wrong, not to the product's feature list. The guarantee is used to lift CVR and protect first-order ROAS.</div>
+    <div class="media">
+      <div class="m"><div class="mwrap"><video src="assets/v-first-period.mp4" poster="assets/p-first-period.jpg" controls preload="none" playsinline></video><span class="tag">Video</span></div>
+        <div class="cap">Narrative-led video. It opens on the daughter's moment rather than the product, then hands the reassurance to the mother watching.</div></div>
     </div>
   </div>
 </section>
@@ -220,54 +265,79 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
 <section id="habit">
   <h2>Habit change</h2>
   <div class="case">
-    <div class="case-grid">
-      <div class="case-media"><img src="quit-nicotine.jpg" alt="UGC video still of a man smiling with a social proof comment card from Jeffry K reading one month without nicotine"></div>
-      <div class="case-body">
-        <h3>Quit-Nicotine Brand</h3>
-        <p>UGC and social-proof creative. Testimonial-led throughout, because in habit change the only voice a sceptical buyer finds credible is somebody who has already done the thing.</p>
-        <p>The creative overlays a real comment onto the testimonial itself, so the proof and the story arrive in the same frame rather than asking the viewer to go looking for reviews.</p>
-        <div class="mech"><b>The angle:</b> social proof does the persuading and the brand stays out of the way. Scepticism-then-conversion is the arc that performs.</div>
-      </div>
+    <div class="case-head"><h3>Quit-Nicotine Brand</h3><div class="role">My role &middot; Creative Strategist</div></div>
+    <div class="case-body">
+      <p>A quit-nicotine brand in a category full of skepticism, where social proof is the whole game. I built a UGC and social-proof system: real-person testimonials styled as native social posts (comment + reactions), honest "I thought it was a joke" angles, and compliant results disclaimers, so the creative felt like a friend's recommendation instead of an ad.</p>
     </div>
-    <div class="imgnote">Shown: testimonial with an overlaid comment card. "I thought it was a joke at first" is the scepticism beat, stated by the customer rather than pre-empted by the brand.</div>
+    <div class="stats">
+      <div class="stat"><div class="v">30&ndash;40%</div><div class="k">Hook rate target</div></div>
+      <div class="stat"><div class="v">10%+</div><div class="k">Hold rate target</div></div>
+      <div class="stat"><div class="v">1.5&ndash;2%</div><div class="k">CTR target</div></div>
+    </div>
+    <div class="mech"><b>The angle:</b> social proof does the persuading and the brand stays out of the way. Scepticism-then-conversion is the arc that performs, and disclaimered claims keep the account compliant while scaling.</div>
+    <div class="media">
+      <div class="m"><div class="mwrap"><video src="assets/v-quit-nicotine.mp4" poster="assets/p-quit-nicotine.jpg" controls preload="none" playsinline></video><span class="tag">Video</span></div>
+        <div class="cap">Third-person entry point: "The easy way to make your husband quit smoking." The buyer is often not the smoker, so the ad is written to the person who wants them to stop.</div></div>
+    </div>
   </div>
 </section>
 
 <section id="accessories">
   <h2>Fitness &amp; accessories</h2>
   <div class="case">
-    <div class="case-grid">
-      <div class="case-media"><img src="shaker-bottle.jpg" alt="All-steel shaker bottle static with benefit callouts for no smell or bacteria, 36+ hour insulation, lifetime warranty and 30 day satisfaction"></div>
-      <div class="case-body">
-        <h3>All-Steel Shaker Bottle</h3>
-        <p>DTC product creative for Meta. A considered-purchase object in a category dominated by cheap plastic, so the creative had to justify a price gap rather than describe a feature.</p>
-        <div class="mech"><b>The angle:</b> every callout answers a specific objection to paying more &mdash; smell and bacteria, insulation, warranty, returns. The risk reversal does as much work as the product shot.</div>
-      </div>
+    <div class="case-head"><h3>All-Steel Shaker Bottle</h3><div class="role">My role &middot; Creative Strategist</div></div>
+    <div class="case-body">
+      <p>A DTC brand selling the first all-steel shaker bottle. With a physical product, the win is making the differentiators obvious fast. I led a benefits-forward static system (no smell or bacteria, 36+ hour insulation, lifetime warranty, patented all-steel design) paired with a review-led angle, so the creative carried both the spec and the social proof a considered purchase needs.</p>
     </div>
-    <div class="imgnote">Shown: benefit-callout static. Four objections handled around a single hero product image.</div>
+    <div class="stats">
+      <div class="stat"><div class="v">25&ndash;35%</div><div class="k">Hook rate target</div></div>
+      <div class="stat"><div class="v">1.5&ndash;2%</div><div class="k">CTR target</div></div>
+      <div class="stat"><div class="v">One-time</div><div class="k">Built for marginal ROAS</div></div>
+    </div>
+    <div class="mech"><b>The angle:</b> every callout answers a specific objection to paying more. The review angle was scaled once the benefits proved out, so social proof carried the spend rather than the spec sheet.</div>
+    <div class="media">
+      <div class="m"><div class="mwrap"><img src="assets/hero-shaker.jpg" alt="All-steel shaker bottle static with callouts for no smell or bacteria, 36+ hour insulation, lifetime warranty, 30 day satisfaction and patented all-steel design"><span class="tag">Static</span></div>
+        <div class="cap">Benefit-callout static. Four objections handled around a single hero product shot, legible at thumbnail size in-feed.</div></div>
+    </div>
   </div>
 </section>
 
 <section id="apparel">
   <h2>Apparel, footwear &amp; watches</h2>
-  <div class="grid2">
-    <div class="case">
-      <div class="case-media"><img src="vegan-sneaker-de.jpg" alt="Vegan sneaker on cactus and cotton background with German benefit callouts for cactus leather, lightweight comfort and non-slip sole"></div>
-      <div class="case-body">
-        <h3>Vegan Sneaker Brand &mdash; Germany</h3>
-        <p>Benefits-led creative for the German market, translating a materials story (cactus leather, organic cotton) into a reason to buy rather than a sustainability claim. Sustainability is a tiebreaker, not a purchase driver, so the copy led with what the buyer gets.</p>
-        <div class="mech"><b>The angle:</b> the material is shown, not asserted &mdash; the cactus and cotton are physically in frame with the product.</div>
-      </div>
-      <div class="imgnote">Shown: German-language benefit callouts (veganes Kaktusleder, leicht und bequem, rutschfeste Sohle).</div>
+
+  <div class="case">
+    <div class="case-head"><h3>Vegan Sneaker Brand &mdash; Germany</h3><div class="role">My role &middot; Creative Strategist</div></div>
+    <div class="case-body">
+      <p>A sustainable vegan sneaker brand (cactus leather) sold into the German market. The strategy was to make sustainability concrete instead of vague. I led a benefits-led creative system in German &mdash; veganes Kaktusleder, leicht und bequem, nat&uuml;rliche rutschfeste Sohle, Fu&szlig;bett aus Bio-Baumwolle &mdash; turning each eco-claim into a tangible reason to buy for a values-driven shopper.</p>
     </div>
-    <div class="case">
-      <div class="case-media"><img src="automatic-watch-bfcm.jpg" alt="Black Friday up to 40% off storewide sale creative featuring a rose gold skeleton automatic watch"></div>
-      <div class="case-body">
-        <h3>Automatic Watch Brand</h3>
-        <p>Product-hero and Black Friday creative. Discount-led promotional work where the offer carries the ad and the product photography has to make the original price look real.</p>
-        <div class="mech"><b>The angle:</b> in BFCM the offer is the hook, so the job of the image is credibility &mdash; the movement is visible through the skeleton dial to justify the pre-discount price.</div>
-      </div>
-      <div class="imgnote">Shown: offer-led hero. Discount stated above the fold, product doing the price-justification below it.</div>
+    <div class="stats">
+      <div class="stat"><div class="v">25&ndash;35%</div><div class="k">Hook rate target</div></div>
+      <div class="stat"><div class="v">8&ndash;12%</div><div class="k">Hold rate target</div></div>
+      <div class="stat"><div class="v">1.5%+</div><div class="k">CTR target</div></div>
+    </div>
+    <div class="mech"><b>The angle:</b> sustainability is a tiebreaker, not a purchase driver, so each eco-claim was converted into a benefit. Localised DE copy to protect relevance, CTR and CPC.</div>
+    <div class="media two">
+      <div class="m"><div class="mwrap"><img src="assets/hero-vegan-sneaker.jpg" alt="Vegan sneaker static with German benefit callouts on a cactus and cotton background"><span class="tag">Static</span></div>
+        <div class="cap">The material is shown, not asserted: the cactus and cotton are physically in frame with the product.</div></div>
+      <div class="m"><div class="mwrap"><video src="assets/v-apparel-jacket.mp4" poster="assets/p-apparel-jacket.jpg" controls preload="none" playsinline></video><span class="tag">Video</span></div>
+        <div class="cap">Product-detail video from the same apparel system, cut for silent autoplay.</div></div>
+    </div>
+  </div>
+
+  <div class="case">
+    <div class="case-head"><h3>Automatic Watch Brand</h3><div class="role">My role &middot; Creative Strategist</div></div>
+    <div class="case-body">
+      <p>An automatic skeleton watch brand at an accessible price. For a considered, design-led purchase, the creative has to make the product the hero and create urgency at the right moment. I led a product-hero and seasonal-promo system (BFCM, up to 40% off storewide), pairing premium product visuals with clear offer framing to pull the deal-driven buyer.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="v">25&ndash;35%</div><div class="k">Hook rate target</div></div>
+      <div class="stat"><div class="v">8&ndash;12%</div><div class="k">Hold rate target</div></div>
+      <div class="stat"><div class="v">1.5%+</div><div class="k">CTR target</div></div>
+    </div>
+    <div class="mech"><b>The angle:</b> promo windows used to compress the buying decision. In BFCM the offer is the hook, so the job of the visual is credibility &mdash; justifying the pre-discount price.</div>
+    <div class="media">
+      <div class="m"><div class="mwrap"><video src="assets/v-watch.mp4" poster="assets/p-watch.jpg" controls preload="none" playsinline></video><span class="tag">Video</span></div>
+        <div class="cap">Smartwatch-versus-automatic comparison under a Black Friday frame. The contrast argues for the category before the offer closes.</div></div>
     </div>
   </div>
 </section>
@@ -280,8 +350,8 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
       <div class="chart-cap">Ten documented brands. Seven sit in health, supplements or wellness, which is where the compliance work and the strongest attributed numbers are.</div>
     </div>
     <div>
-      <div class="chart-box"><canvas id="roas"></canvas></div>
-      <div class="chart-cap">The two engagements with full revenue attribution. Blended ROAS across all campaigns run, not a best-campaign figure.</div>
+      <div class="chart-box"><canvas id="hooks"></canvas></div>
+      <div class="chart-cap">Hook-rate targets the creative systems were built and tested against, by category. Health and habit-change categories carry the highest bar because scepticism is the binding constraint.</div>
     </div>
   </div>
 </section>
@@ -293,7 +363,7 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
     <li><b>Write hooks per angle before anything is designed.</b> The angle is the unit of testing, not the asset. Design follows the message, never the reverse.</li>
     <li><b>Run statics and UGC video in parallel.</b> Same angles, two formats. This separates the winning message from the winning format, which a single-format test cannot do.</li>
     <li><b>Brief editors and creators so they execute once.</b> A brief that needs three rounds of clarification was not finished when it was sent. Briefs go out with the hook, the beat structure, the references and the reason.</li>
-    <li><b>Iterate on hook rate, hold rate, CTR and CPC</b> using a 3:2:2 structure, and kill on evidence rather than on taste.</li>
+    <li><b>Iterate on hook rate, hold rate, CTR and CPC</b> using 3:2:2 hook/body/CTA testing, and kill on evidence rather than on taste.</li>
   </ol>
   <div class="scope" style="margin-top:22px">
     <b>What I don't do:</b> I don't edit video and I don't buy media. I hand finished briefs, hooks and scripts to your editors, and the numbers back to whoever runs the account. If you need one person to do all three, I'm the wrong hire and I'd rather say so now.
@@ -334,7 +404,7 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
 
 <footer>
   <div>Santiago Correal Mantilla &middot; Creative Strategist &middot; Meta / Facebook Ads, UGC &amp; Direct-Response DTC</div>
-  <div style="margin-top:6px">Revenue and ROAS figures are blended across all campaigns run for that brand. Brand names are withheld where the engagement was under NDA and can be confirmed on a call.</div>
+  <div style="margin-top:6px">Net sales and ROAS are brand-level figures over the engagement. Hook rate, hold rate, CTR and CPC figures are the targets each creative system was built and tested against. Brand names are withheld where the engagement was under NDA and can be confirmed on a call.</div>
 </footer>
 
 </div>
@@ -342,31 +412,25 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
 <script>
 (function(){
   if (typeof Chart === 'undefined') return;
-  var ink='#111418', mute='#6b7280', line='#e6e8ec';
+  var mute='#6b7280', line='#e6e8ec';
   new Chart(document.getElementById('mix'), {
     type:'doughnut',
-    data:{
-      labels:['Supplements & nutrition','Women’s health','Apparel & watches','Men’s health','Habit change','Fitness accessories'],
-      datasets:[{data:[3,2,2,1,1,1],
-        backgroundColor:['#0f766e','#14b8a6','#5eead4','#99f6e4','#ccfbf1','#f0fdfa'],
-        borderWidth:2, borderColor:'#fff'}]
-    },
+    data:{labels:['Supplements & nutrition','Women’s health','Apparel & watches','Men’s health','Habit change','Fitness accessories'],
+      datasets:[{data:[3,2,2,1,1,1],backgroundColor:['#0f766e','#14b8a6','#5eead4','#99f6e4','#ccfbf1','#f0fdfa'],borderWidth:2,borderColor:'#fff'}]},
     options:{responsive:true,maintainAspectRatio:false,cutout:'58%',
       plugins:{legend:{position:'right',labels:{boxWidth:10,boxHeight:10,font:{size:12},color:mute,padding:11}},
         tooltip:{callbacks:{label:function(c){return c.label+': '+c.parsed+(c.parsed===1?' brand':' brands');}}}}}
   });
-  new Chart(document.getElementById('roas'), {
+  new Chart(document.getElementById('hooks'), {
     type:'bar',
-    data:{labels:["Women's supplement (DE)","Men's sexual health"],
-      datasets:[{label:'Blended ROAS',data:[1.9,2.1],
-        backgroundColor:['#0f766e','#14b8a6'],borderRadius:6,borderSkipped:false,barPercentage:0.55}]},
-    options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false},
-        tooltip:{callbacks:{label:function(c){
-          var extra = c.dataIndex===0 ? '€2.2M net sales · 53 campaigns' : '$1.2M net sales · 11 campaigns';
-          return [c.parsed.y+'× blended ROAS', extra];}}}},
-      scales:{y:{beginAtZero:true,suggestedMax:2.5,grid:{color:line},ticks:{color:mute,callback:function(v){return v+'×';}}},
-        x:{grid:{display:false},ticks:{color:mute,font:{size:12}}}}}
+    data:{labels:["Women's supp (DE)","Quit-nicotine","Men's health","Mushroom","Nootropic","Period pain","First-period","Watch / sneaker / bottle"],
+      datasets:[{label:'Hook-rate target (%)',data:[35,35,30,30,30,30,30,30],
+        backgroundColor:['#0f766e','#0f766e','#14b8a6','#14b8a6','#14b8a6','#14b8a6','#14b8a6','#5eead4'],
+        borderRadius:5,borderSkipped:false}]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.x+'%+ hook rate target';}}}},
+      scales:{x:{beginAtZero:true,suggestedMax:45,grid:{color:line},ticks:{color:mute,callback:function(v){return v+'%';}}},
+        y:{grid:{display:false},ticks:{color:mute,font:{size:11}}}}}
   });
 })();
 </script>
