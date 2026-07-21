@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Santiago Correal — Creative Strategist | Meta / DTC Direct Response</title>
+<meta name="description" content="Direct-response creative strategy for DTC supplement, health and wellness brands. €2.2M net sales at 1.9 blended ROAS across 53 campaigns. Angles, hooks, UGC scripts and briefs.">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js"></script>
+<style>
+:root{
+  color-scheme: light;
+  --ink:#111418; --body:#3d4550; --mute:#6b7280; --line:#e6e8ec;
+  --bg:#ffffff; --soft:#f7f8fa; --accent:#0f766e; --accent-soft:#ecfdf5;
+  --warn:#b45309; --warn-soft:#fffbeb;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--body);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:940px;margin:0 auto;padding:0 24px}
+h1,h2,h3{color:var(--ink);letter-spacing:-0.02em;margin:0}
+h1{font-size:38px;line-height:1.15;font-weight:700}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.09em;color:var(--mute);font-weight:700;margin:0 0 18px}
+h3{font-size:21px;font-weight:650;line-height:1.25}
+p{margin:0 0 14px}
+a{color:var(--accent)}
+
+header{border-bottom:1px solid var(--line);padding:56px 0 40px}
+.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.09em;color:var(--accent);font-weight:700;margin-bottom:14px}
+.lede{font-size:19px;line-height:1.55;color:var(--body);max-width:660px;margin:18px 0 0}
+.meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:24px;font-size:14px;color:var(--mute)}
+.meta strong{color:var(--ink)}
+
+nav.jump{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+nav.jump .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:12px;padding-bottom:12px}
+nav.jump a{font-size:13px;font-weight:600;color:var(--body);text-decoration:none;padding:6px 12px;border-radius:999px;white-space:nowrap;border:1px solid transparent}
+nav.jump a:hover{background:var(--soft);border-color:var(--line)}
+
+section{padding:52px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:none}
+
+.headline-nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:32px}
+.num{border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--soft)}
+.num .v{font-size:32px;font-weight:700;color:var(--ink);letter-spacing:-0.03em;line-height:1.1}
+.num .k{font-size:13px;color:var(--mute);margin-top:6px}
+
+.case{border:1px solid var(--line);border-radius:14px;padding:26px;margin-bottom:18px;background:#fff}
+.case.flag{border-color:#bfe3dd;background:linear-gradient(180deg,var(--accent-soft) 0%,#fff 120px)}
+.case-top{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;flex-wrap:wrap;margin-bottom:6px}
+.cat{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:999px}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin:18px 0;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat .v{font-size:22px;font-weight:700;color:var(--ink);letter-spacing:-0.02em}
+.stat .k{font-size:12px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em}
+.mech{background:var(--soft);border-left:3px solid var(--accent);padding:14px 16px;border-radius:0 8px 8px 0;margin-top:16px;font-size:15px}
+.mech b{color:var(--ink)}
+
+.slot{border:1px dashed #cbd5e1;border-radius:10px;background:#fbfcfd;color:#94a3b8;font-size:13px;text-align:center;padding:26px 16px;margin-top:16px}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}h1{font-size:30px}}
+
+.chart-box{border:1px solid var(--line);border-radius:12px;padding:20px;background:#fff;height:290px;position:relative}
+.chart-cap{font-size:13px;color:var(--mute);margin-top:12px}
+
+ol.process{counter-reset:s;list-style:none;padding:0;margin:0}
+ol.process li{position:relative;padding-left:44px;margin-bottom:18px}
+ol.process li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:1px;width:28px;height:28px;border-radius:999px;background:var(--ink);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+ol.process b{color:var(--ink)}
+
+.scope{border:1px solid #fde68a;background:var(--warn-soft);border-radius:12px;padding:18px 20px;color:#78350f;font-size:15px}
+.scope b{color:#78350f}
+
+.creds{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chip{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--body);background:#fff}
+
+.cta{background:var(--ink);color:#fff;border-radius:16px;padding:34px}
+.cta h3{color:#fff;font-size:24px}
+.cta p{color:#c8ced6;margin-top:10px}
+.cta .btn{display:inline-block;margin-top:18px;background:#fff;color:var(--ink);font-weight:650;font-size:15px;text-decoration:none;padding:12px 22px;border-radius:10px}
+.cta .alt{color:#9aa3ae;font-size:14px;margin-top:14px}
+footer{padding:34px 0;color:var(--mute);font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Creative Strategist &middot; Barcelona</div>
+    <h1>I write the angles, hooks and scripts<br>behind Meta ads that sell.</h1>
+    <p class="lede">Direct-response performance creative for DTC supplement, health and wellness brands. I map awareness and sophistication stages, write the hooks before anything gets designed, and brief the editors so they can execute without a back-and-forth. I do not edit and I do not buy media.</p>
+    <div class="meta">
+      <span><strong>Native</strong> English &amp; Spanish &middot; fluent Italian</span>
+      <span><strong>Top Rated</strong> on Upwork &middot; 100% Job Success</span>
+      <span><strong>Meta Blueprint</strong> certified</span>
+    </div>
+    <div class="headline-nums">
+      <div class="num"><div class="v">&euro;2.2M</div><div class="k">net sales, women's supplement brand (DE)</div></div>
+      <div class="num"><div class="v">1.9&times;</div><div class="k">blended ROAS across 53 campaigns</div></div>
+      <div class="num"><div class="v">$1.2M</div><div class="k">net sales, men's sexual-health brand</div></div>
+      <div class="num"><div class="v">2.1&times;</div><div class="k">blended ROAS across 11 campaigns</div></div>
+    </div>
+  </div>
+</header>
+
+<nav class="jump">
+  <div class="wrap">
+    <a href="#supplements">Supplements</a>
+    <a href="#mens-health">Men's health &amp; restricted</a>
+    <a href="#womens-health">Women's health</a>
+    <a href="#habit">Habit change</a>
+    <a href="#accessories">Fitness &amp; accessories</a>
+    <a href="#apparel">Apparel &amp; watches</a>
+    <a href="#process">How I work</a>
+    <a href="#background">Background</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<section id="supplements">
+  <h2>Supplements, vitamins &amp; nutrition</h2>
+
+  <div class="case flag">
+    <div class="case-top">
+      <h3>Women's Supplement Brand &mdash; Germany</h3>
+      <span class="cat">Flagship</span>
+    </div>
+    <p>DTC creative strategy for a women's supplement brand selling into the German market. A heavily moderated category: the ad account was suspended repeatedly over the life of the work, so every angle had to be written to survive review as well as convert.</p>
+    <div class="stats">
+      <div class="stat"><div class="v">&euro;2.2M</div><div class="k">Net sales</div></div>
+      <div class="stat"><div class="v">1.9&times;</div><div class="k">Blended ROAS</div></div>
+      <div class="stat"><div class="v">53</div><div class="k">Campaigns</div></div>
+      <div class="stat"><div class="v">DE</div><div class="k">Market</div></div>
+    </div>
+    <div class="mech"><b>Why it worked:</b> writing inside structure-and-function claim language from the first draft rather than trying to soften a non-compliant hook afterwards. Compliant angles ship, stay live, and accumulate learning; aggressive ones get pulled and reset the account's history.</div>
+    <div class="slot">Ad creative + Shopify revenue dashboard &mdash; drop assets here</div>
+  </div>
+
+  <div class="case">
+    <h3>Functional Mushroom Supplement</h3>
+    <p>Advertorial creative built on <b>extraction quality</b> as the differentiator, in a category where nearly every competitor advertises the same ingredient list. The mechanism of the product became the story, which gave the ad something to say that rivals could not copy in a week.</p>
+    <div class="mech"><b>Why it worked:</b> in a commoditised category, the specification is the angle. Advertorial format buys the room needed to explain why extraction ratio changes the outcome.</div>
+    <div class="slot">Advertorial creative &mdash; drop assets here</div>
+  </div>
+
+  <div class="case">
+    <h3>Nootropic Focus Drink</h3>
+    <p>DTC performance creative for Meta. Statics and UGC video developed in parallel against the same set of angles, so the winning message could be identified independently of the format carrying it.</p>
+    <div class="slot">Statics + UGC &mdash; drop assets here</div>
+  </div>
+</section>
+
+<section id="mens-health">
+  <h2>Men's health &amp; restricted categories</h2>
+  <div class="case flag">
+    <div class="case-top">
+      <h3>Men's Sexual-Health Supplement</h3>
+      <span class="cat">Compliance</span>
+    </div>
+    <p>Compliant direct-response creative for a category most strategists will not touch, because the failure mode is not a bad CPA, it is a dead ad account. Every hook was written to clear review on the first pass.</p>
+    <div class="stats">
+      <div class="stat"><div class="v">$1.2M</div><div class="k">Net sales</div></div>
+      <div class="stat"><div class="v">2.1&times;</div><div class="k">Blended ROAS</div></div>
+      <div class="stat"><div class="v">11</div><div class="k">Campaigns</div></div>
+    </div>
+    <div class="mech"><b>Why it worked:</b> the constraint became the creative brief. Working inside FTC and FDA claim rules forces you to sell the outcome through situation and identity rather than a promise, which is more durable copy anyway.</div>
+    <div class="slot">Compliant DR creative &mdash; drop assets here</div>
+  </div>
+  <p style="font-size:15px;color:var(--mute)">If your product touches health claims, minors, detox, or anything Meta treats as sensitive, this is the work that matters more than the ROAS number above it.</p>
+</section>
+
+<section id="womens-health">
+  <h2>Women's health</h2>
+  <div class="grid2">
+    <div class="case">
+      <h3>Drug-Free Period Pain Device</h3>
+      <p>UGC and comparison creative for a wearable device treating period pain without medication. Comparison framing against the painkiller the customer already uses.</p>
+      <div class="mech"><b>Angle:</b> the competitor is not another device, it is ibuprofen. The ad has to beat the habit, not the category.</div>
+      <div class="slot">UGC + comparison &mdash; drop assets here</div>
+    </div>
+    <div class="case">
+      <h3>First-Period Care Brand</h3>
+      <p>Emotional direct-response creative for a first-period care brand. The buyer is a parent, the user is a child, and the two need different promises inside one ad.</p>
+      <div class="mech"><b>Angle:</b> written to the parent's fear of getting it wrong, not to the product's feature list.</div>
+      <div class="slot">Emotional DR creative &mdash; drop assets here</div>
+    </div>
+  </div>
+</section>
+
+<section id="habit">
+  <h2>Habit change</h2>
+  <div class="case">
+    <h3>Quit-Nicotine Brand</h3>
+    <p>UGC and social-proof creative for a quit-nicotine product. Testimonial-led, because in habit change the only credible voice is somebody who already did it.</p>
+    <div class="mech"><b>Angle:</b> social proof does the persuading; the brand stays out of the way. Scepticism-then-conversion is the arc that performs.</div>
+    <div class="slot">UGC + social proof &mdash; drop assets here</div>
+  </div>
+</section>
+
+<section id="accessories">
+  <h2>Fitness &amp; accessories</h2>
+  <div class="case">
+    <h3>All-Steel Shaker Bottle</h3>
+    <p>DTC product creative for Meta. A considered-purchase object in a category dominated by cheap plastic, so the creative had to justify a price gap rather than describe a feature.</p>
+    <div class="slot">Product creative &mdash; drop assets here</div>
+  </div>
+</section>
+
+<section id="apparel">
+  <h2>Apparel, footwear &amp; watches</h2>
+  <div class="grid2">
+    <div class="case">
+      <h3>Vegan Sneaker Brand &mdash; Germany</h3>
+      <p>Benefits-led creative for the German market, translating a materials story (cactus leather, organic cotton) into a reason to buy rather than a sustainability claim.</p>
+      <div class="slot">DE-market benefits creative &mdash; drop assets here</div>
+    </div>
+    <div class="case">
+      <h3>Automatic Watch Brand</h3>
+      <p>Product-hero and Black Friday creative. Discount-led promotional work where the offer carries the ad and the product has to look worth the original price.</p>
+      <div class="slot">Product hero + BFCM &mdash; drop assets here</div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio-shape">
+  <h2>What the portfolio is weighted toward</h2>
+  <div class="grid2">
+    <div>
+      <div class="chart-box"><canvas id="mix"></canvas></div>
+      <div class="chart-cap">Ten documented brands. Seven sit in health, supplements or wellness, which is where the compliance work and the strongest numbers are.</div>
+      <div class="chart-cap" style="margin-top:14px"><a href="Santiago-Correal-Case-Studies.pdf" style="font-weight:650">Download the full case-study PDF &rarr;</a></div>
+    </div>
+    <div>
+      <div class="chart-box"><canvas id="roas"></canvas></div>
+      <div class="chart-cap">The two engagements with full revenue attribution. Blended ROAS across all campaigns run, not a best-campaign figure.</div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <h2>How I work</h2>
+  <ol class="process">
+    <li><b>Map awareness and sophistication.</b> Where the market already is decides whether the ad opens with a problem, a mechanism, or a claim. Skipping this is why most creative tests are unreadable.</li>
+    <li><b>Write hooks per angle before anything is designed.</b> The angle is the unit of testing, not the asset. Design comes after the message is chosen.</li>
+    <li><b>Run statics and UGC video in parallel.</b> Same angles, two formats, so the winning message is separable from the winning format.</li>
+    <li><b>Brief editors and creators so they execute once.</b> A brief that needs three rounds of clarification is a brief that was not finished.</li>
+    <li><b>Iterate on hook rate, hold rate, CTR and CPC</b> using 3:2:2 testing, and kill on evidence rather than on taste.</li>
+  </ol>
+  <div class="scope" style="margin-top:22px">
+    <b>What I don't do:</b> I don't edit video and I don't buy media. I hand finished briefs, hooks and scripts to your editors, and the numbers back to whoever runs the account. If you need one person to do all three, I'm the wrong hire and I'd rather say so now.
+  </div>
+</section>
+
+<section id="background">
+  <h2>Background</h2>
+  <div class="grid2">
+    <div>
+      <p><b>Scaled SteadyEcom to $2M a year</b>, owning creative strategy alongside the funnel, the automations and the ads attribution &mdash; so I read the numbers that say which creative is actually working, not just the ones in Ads Manager.</p>
+      <p><b>Built and sold an AI marketing agency</b> (Avalanche AI), with clients including Wholesome Good.</p>
+      <p><b>Led a team of 70 at NexxAI</b> across marketing, creative strategy and AI.</p>
+    </div>
+    <div>
+      <p><b>Past 5M views</b> on short-form and UGC for a supplement brand, converted to sales rather than left as reach.</p>
+      <p><b>Grew a wellness brand from 800 to 13K followers in six months</b>, fully organic.</p>
+      <p><b>Compliance:</b> I write inside structure-and-function claims plus FTC and FDA rules. In health and wellness this is usually the difference between a campaign that compounds and an account that gets restricted.</p>
+    </div>
+  </div>
+  <div class="creds" style="margin-top:20px">
+    <span class="chip">Meta Blueprint</span>
+    <span class="chip">TikTok Academy Creative</span>
+    <span class="chip">HubSpot Content Marketing</span>
+    <span class="chip">Google Digital Marketing</span>
+    <span class="chip">ESADE &middot; MSc Innovation &amp; Entrepreneurship</span>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="cta">
+    <h3>Want to see whether the angles hold up on your product?</h3>
+    <p>Send me your product page and your current best-performing ad. I'll come back with three angles I'd test against it and the reasoning behind each, written out, no call required. If it's useful we can talk. If it isn't, you've lost nothing.</p>
+    <a class="btn" href="mailto:santiago@avalanche-ai.com?subject=Three%20angles%20on%20my%20product">Send me your product page</a>
+    <div class="alt">santiago@avalanche-ai.com &middot; Barcelona (CET) &middot; replies within 0&ndash;4 hours</div>
+  </div>
+</section>
+
+<footer>
+  <div>Santiago Correal Mantilla &middot; Creative Strategist &middot; Meta / Facebook Ads, UGC &amp; Direct-Response DTC</div>
+  <div style="margin-top:6px">Revenue and ROAS figures are blended across all campaigns run for that brand. Brand names are withheld where the engagement was under NDA and can be confirmed on a call.</div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  var ink='#111418', mute='#6b7280', line='#e6e8ec';
+
+  new Chart(document.getElementById('mix'), {
+    type:'doughnut',
+    data:{
+      labels:['Supplements & nutrition','Women’s health','Apparel & watches','Men’s health','Habit change','Fitness accessories'],
+      datasets:[{
+        data:[3,2,2,1,1,1],
+        backgroundColor:['#0f766e','#14b8a6','#5eead4','#99f6e4','#ccfbf1','#f0fdfa'],
+        borderWidth:2, borderColor:'#fff'
+      }]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false, cutout:'58%',
+      plugins:{
+        legend:{position:'right', labels:{boxWidth:10, boxHeight:10, font:{size:12}, color:mute, padding:12}},
+        tooltip:{callbacks:{label:function(c){return c.label+': '+c.parsed+(c.parsed===1?' brand':' brands');}}}
+      }
+    }
+  });
+
+  new Chart(document.getElementById('roas'), {
+    type:'bar',
+    data:{
+      labels:["Women's supplement (DE)","Men's sexual health"],
+      datasets:[{
+        label:'Blended ROAS',
+        data:[1.9,2.1],
+        backgroundColor:['#0f766e','#14b8a6'],
+        borderRadius:6, borderSkipped:false, barPercentage:0.55
+      }]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{
+        legend:{display:false},
+        tooltip:{callbacks:{label:function(c){
+          var extra = c.dataIndex===0 ? '€2.2M net sales · 53 campaigns' : '$1.2M net sales · 11 campaigns';
+          return [c.parsed.y+'× blended ROAS', extra];
+        }}}
+      },
+      scales:{
+        y:{beginAtZero:true, suggestedMax:2.5, grid:{color:line}, ticks:{color:mute, callback:function(v){return v+'×';}}},
+        x:{grid:{display:false}, ticks:{color:mute, font:{size:12}}}
+      }
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
