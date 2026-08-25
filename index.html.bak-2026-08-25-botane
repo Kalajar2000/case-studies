@@ -125,7 +125,6 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
   <div class="wrap">
     <a href="#supplements">Supplements</a>
     <a href="#mens-health">Men's health &amp; restricted</a>
-    <a href="#beauty">Beauty &amp; grooming</a>
     <a href="#womens-health">Women's health</a>
     <a href="#habit">Habit change</a>
     <a href="#accessories">Fitness &amp; accessories</a>
@@ -289,40 +288,6 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
     </div>
   </div>
   <p style="font-size:15px;color:var(--mute);max-width:780px">If your product touches health claims, minors, detox, or anything Meta treats as sensitive, this is the work that matters more than the ROAS number above it. Ask me about it directly.</p>
-</section>
-
-<section id="beauty">
-  <h2>Beauty, grooming &amp; personal care</h2>
-
-  <div class="case">
-    <div class="case-head">
-      <div class="case-top"><h3>Botan&eacute; &mdash; Men's Grooming (BotaneLabs)</h3><span class="cat">Subscription</span></div>
-      <div class="role">My role &middot; Creative Strategist</div>
-    </div>
-    <div class="case-body">
-      <p>A men's grooming DTC brand selling a papain Root-Dissolve depilatory: apply, five minutes, wipe with the included glove, results that hold for about a week. No blade, so no nicks, no burn and no ingrown hairs. I run creative strategy on the account, which means the weekly brief pack, the copywriter handoff, and the reporting the briefs are decided from.</p>
-      <p>The first thing I changed was not an ad. It was what the account was being judged on. Creative reporting here now runs on hook rate and hold rate rather than first-order ROAS, and the reason is the business model. This is a subscription product with roughly four to six months of retention, so the media cost is paid once at acquisition and every renewal after that carries none. A first order of about fifty dollars is the start of the customer, not the size of them, and a first-order number read on its own will talk you out of creative that is actually working.</p>
-      <p>Once the reporting changed, the pattern was immediate. The losses were concentrated in a small number of long-form videos, the worst of them a single 111-second animation, while the 25 to 35 second cuts were carrying the account. Length was doing more damage than any hook.</p>
-    </div>
-    <div class="stats">
-      <div class="stat"><div class="v">~$667K</div><div class="k">Meta spend on the account</div></div>
-      <div class="stat"><div class="v">~$52</div><div class="k">First order</div></div>
-      <div class="stat"><div class="v">4&ndash;6 mo</div><div class="k">Subscription retention</div></div>
-      <div class="stat"><div class="v">25&ndash;35s</div><div class="k">Length that carried it</div></div>
-    </div>
-    <div class="mech"><b>Why it worked:</b> on a subscription product the first order is a deposit, not the revenue. Judging creative on first-order ROAS kills ads that are buying four to six months of a customer. Hook rate and hold rate tell you whether the creative did its job, and the retention decides what that job was worth.</div>
-    <div class="mech"><b>The structure:</b> the angles do not run under the brand. They run creator-led, across separate persona pages and in both English and French, so the same argument can be tested against different messengers and markets without the brand account absorbing every test. The personas are written first, The Bleeder who has quietly hated shaving for ten years, the Permission-Seeker, the one who is only chasing the clean feeling, and the brief is built for the persona rather than the product.</div>
-    <div class="media three">
-      <div class="m"><div class="mwrap"><img src="assets/hero-botane.jpg" alt="Botane before and after static, de poilu a lisse, sans rasage"><span class="tag">Static</span></div>
-        <div class="cap">The before and after, run in French. <i>De poilu &agrave; lisse. Sans rasage.</i> The proof is the whole ad, and the product sits between the two states rather than on top of them.</div></div>
-      <div class="m"><div class="mwrap"><video src="assets/v-botane-ugc.mp4" poster="assets/p-botane-ugc.jpg" controls preload="none" playsinline></video><span class="tag">UGC &middot; 26s</span></div>
-        <div class="cap">Creator-led UGC, written for The Bleeder, the man who has shaved for ten years and stopped noticing how much he hates it. Twenty six seconds, inside the band that was carrying the account.</div></div>
-      <div class="m"><div class="mwrap"><video src="assets/v-botane-longform.mp4" poster="assets/p-botane-longform.jpg" controls preload="none" playsinline></video><span class="tag">Animation &middot; 111s</span></div>
-        <div class="cap">The same offer as a 111 second animated explainer. Same account, same product, four times the length. This is the shape of creative the reporting rebuild flagged, and it is why length became the first variable I test rather than the last.</div></div>
-    </div>
-  </div>
-
-  <p style="font-size:15px;color:var(--mute);max-width:780px">Also working in beauty and personal care: Seoul Beauty, Collagea and Silkhair.</p>
 </section>
 
 <section id="womens-health">
