@@ -26,10 +26,10 @@ header{border-bottom:1px solid var(--line);padding:56px 0 42px}
 .lede{font-size:19px;line-height:1.55;max-width:700px;margin:18px 0 0}
 .meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:24px;font-size:14px;color:var(--mute)}
 .meta strong{color:var(--ink)}
-.headline-nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:32px}
-.num{border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--soft)}
-.num .v{font-size:30px;font-weight:700;color:var(--ink);letter-spacing:-0.03em;line-height:1.1}
-.num .k{font-size:13px;color:var(--mute);margin-top:6px}
+.headline-nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;margin-top:32px}
+.num{border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--soft);display:flex;flex-direction:column;justify-content:flex-start;min-width:0;overflow:hidden}
+.num .v{font-size:clamp(19px,2.05vw,28px);font-weight:700;color:var(--ink);letter-spacing:-0.03em;line-height:1.14;overflow-wrap:break-word;word-break:normal;padding-right:18px}
+.num .k{font-size:13px;color:var(--mute);margin-top:7px;overflow-wrap:break-word;padding-right:14px;padding-bottom:6px}
 .pdfbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-top:26px}
 .pdfbar a{font-weight:650;text-decoration:none}
 .pdfbar span{font-size:13.5px;color:var(--mute)}
@@ -82,6 +82,36 @@ ol.process b{color:var(--ink)}
 .certrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .cert{font-size:12.5px;font-weight:650;border:1px solid #bfe3dd;background:var(--accent-soft);color:#0f766e;border-radius:999px;padding:5px 12px}
 @media(max-width:860px){.headshot{width:64px;height:64px}.name{font-size:18px}}
+
+/* clickable benchmark tiles */
+a.num{display:block;text-decoration:none;color:inherit;position:relative;transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
+a.num:hover{transform:translateY(-3px);border-color:#bfe3dd;box-shadow:0 8px 22px rgba(15,118,110,.10)}
+a.num:hover .v{color:var(--accent)}
+a.num:after{content:"\2192";position:absolute;right:14px;bottom:12px;font-size:14px;color:#ccd3da;transition:color .15s ease,transform .15s ease}
+a.num:hover:after{color:var(--accent);transform:translateX(3px)}
+.num .v.long{font-size:clamp(17px,1.55vw,21px);letter-spacing:-0.02em;line-height:1.2}
+.num .sub{font-size:11.5px;color:#9aa3ae;margin-top:7px;letter-spacing:.03em;text-transform:uppercase;font-weight:650}
+
+/* markets */
+.markets{margin-top:30px;border:1px solid var(--line);border-radius:14px;padding:20px 22px;background:var(--soft)}
+.markets h4{margin:0 0 4px;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--mute)}
+.markets .msub{font-size:13.5px;color:var(--mute);margin:0 0 14px}
+.mrow{display:flex;flex-wrap:wrap;gap:8px}
+.mkt{font-size:13px;font-weight:600;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 13px;color:var(--ink);display:inline-flex;align-items:center;gap:7px}
+.mkt .flag{font-size:15px;line-height:1}
+.mkt.core{border-color:#bfe3dd;background:var(--accent-soft);color:#0f766e}
+
+/* background timeline */
+.tl{position:relative;padding-left:26px;margin:0}
+.tl:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--accent) 0%,var(--line) 100%)}
+.tl .item{position:relative;margin-bottom:22px}
+.tl .item:last-child{margin-bottom:0}
+.tl .item:before{content:"";position:absolute;left:-24px;top:7px;width:10px;height:10px;border-radius:999px;background:#fff;border:2px solid var(--accent)}
+.tl .lab{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin-bottom:3px}
+.tl .hl{font-size:17px;font-weight:680;color:var(--ink);letter-spacing:-0.01em;line-height:1.35;margin-bottom:5px}
+.tl p{margin:0;font-size:15px}
+.bgnote{border:1px solid #bfe3dd;background:var(--accent-soft);border-radius:12px;padding:16px 18px;font-size:14.5px;color:#0f5f59;margin-top:4px}
+.bgnote b{color:#0b4a45}
 .chip{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--body);background:#fff}
 .cta{background:var(--ink);color:#fff;border-radius:16px;padding:34px}
 .cta h3{color:#fff;font-size:24px}
@@ -116,21 +146,39 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
       <span class="cert">Creative Milkshake certified</span>
     </div>
     <div class="headline-nums">
-      <div class="num"><div class="v">5 years</div><div class="k">creative strategy for DTC direct response, Meta-first</div></div>
-      <div class="num"><div class="v">$50M+</div><div class="k">revenue contributed to across the brands I've run creative for</div></div>
-      <div class="num"><div class="v">$200M / yr</div><div class="k">DTC portfolio I manage creative on day to day (Wholesome Goods)</div></div>
-      <div class="num"><div class="v">7, 8 &amp; 9-figure</div><div class="k">brand scales I've written direct-response creative for</div></div>
-      <div class="num"><div class="v">$2M / yr</div><div class="k">coaching business scaled owning creative, copy, email, funnel and attribution</div></div>
-      <div class="num"><div class="v">$500K&rarr;$750K / mo</div><div class="k">Meta spend scaled on one 8-figure supplement brand</div></div>
-    </div>
-    <div class="headline-nums" style="margin-top:12px">
-      <div class="num"><div class="v">$10K&ndash;$2.5M / mo</div><div class="k">ad budgets my creative runs against, across accounts</div></div>
-      <div class="num"><div class="v">&euro;2.2M</div><div class="k">net sales, women's supplement DE &mdash; full attribution, 53 campaigns</div></div>
-      <div class="num"><div class="v">64</div><div class="k">campaigns run on the attributed accounts</div></div>
-      <div class="num"><div class="v">3.8&times;</div><div class="k">ROAS on managed accounts (HYLN)</div></div>
-      <div class="num"><div class="v">70</div><div class="k">people led at NexxAI across marketing, creative and AI</div></div>
+      <a class="num" href="#supplements"><div class="v">5 years</div><div class="k">creative strategy for DTC direct response, Meta-first</div></a>
+      <a class="num" href="#supplements"><div class="v">$50M+</div><div class="k">revenue contributed to across the brands I've run creative for</div></a>
+      <a class="num" href="#supplements"><div class="v">$200M / yr</div><div class="k">DTC portfolio I manage creative on day to day (Wholesome Goods)</div></a>
+      <a class="num" href="#supplements"><div class="v long">7, 8 &amp; 9-figure</div><div class="k">brand scales I've written direct-response creative for</div></a>
+      <a class="num" href="#funnel"><div class="v">$2M / yr</div><div class="k">coaching business scaled owning creative, copy, email, funnel and attribution</div></a>
+      <a class="num" href="#supplements"><div class="v long">$500K&rarr;$750K / mo</div><div class="k">Meta spend scaled on one 8-figure supplement brand</div></a>
+      <a class="num" href="#supplements"><div class="v long">$10K&ndash;$2.5M / mo</div><div class="k">ad budgets my creative runs against, across accounts</div></a>
+      <a class="num" href="#supplements"><div class="v">&euro;2.2M</div><div class="k">net sales, women's supplement DE &mdash; full attribution, 53 campaigns</div></a>
+      <a class="num" href="#supplements"><div class="v">64</div><div class="k">campaigns run on the attributed accounts</div></a>
+      <a class="num" href="#background"><div class="v">3.8&times;</div><div class="k">ROAS on managed accounts (HYLN)</div></a>
+      <a class="num" href="#supplements"><div class="v">962 days</div><div class="k">longest-running creative I wrote, still the account benchmark</div></a>
+      <a class="num" href="#background"><div class="v">70</div><div class="k">people led at NexxAI across marketing, creative and AI</div></a>
     </div>
     <p style="font-size:13.5px;color:var(--mute);margin-top:14px;max-width:790px">Revenue and spend figures are shown for accounts where I have attribution or direct budget visibility; the $50M+ figure is cumulative revenue across the brands I have run creative for, not revenue I claim sole credit for. Many other brands and accounts are documented by creative system, angles and the performance targets they were built against, rather than by client revenue I'm not free to publish. Every number on this page can be evidenced on a call.</p>
+    <div class="markets">
+      <h4>Markets I've written for</h4>
+      <p class="msub">English-language direct response. Same discipline in each, but the proof, the objection and the offer framing all shift by market.</p>
+      <div class="mrow">
+        <span class="mkt core"><span class="flag">&#127482;&#127480;</span>United States</span>
+        <span class="mkt core"><span class="flag">&#127468;&#127463;</span>United Kingdom</span>
+        <span class="mkt core"><span class="flag">&#127464;&#127462;</span>Canada</span>
+        <span class="mkt core"><span class="flag">&#127462;&#127482;</span>Australia</span>
+        <span class="mkt core"><span class="flag">&#127475;&#127487;</span>New Zealand</span>
+        <span class="mkt core"><span class="flag">&#127475;&#127473;</span>Netherlands</span>
+      </div>
+      <h4 style="margin-top:20px">Directed, not written by me</h4>
+      <p class="msub">Concept, angle and creative direction were mine. The copy was written and checked by a native speaker before it ran.</p>
+      <div class="mrow">
+        <span class="mkt"><span class="flag">&#127467;&#127479;</span>France</span>
+        <span class="mkt"><span class="flag">&#127473;&#127481;</span>Lithuania</span>
+      </div>
+      <p class="msub" style="margin:14px 0 0">Native English and Spanish, fluent Italian.</p>
+    </div>
     <div class="pdfbar">
       <a href="Santiago-Correal-Case-Studies.pdf">Download the full case-study PDF &rarr;</a>
       <span>All ten case studies, the account metrics and the testing framework, in one file</span>
@@ -192,7 +240,7 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
         <div class="cap">The 437-day winner, launched Dec 2024 and still running in Mar 2026. Menopause identity hook, day-by-day proof underneath.</div></div>
       <div class="m"><div class="mwrap"><img loading="lazy" src="assets/adlib/m1368656520818733_lwVbz6FHP0E.jpeg" alt="Mechanism variant: the 13-ingredient blend carries the claim, with a 48-hour promise as the headline."><span class="tag">Static &middot; 412 days</span></div>
         <div class="cap">Mechanism variant: the 13-ingredient blend carries the claim, with a 48-hour promise as the headline.</div></div>
-      <div class="m"><div class="mwrap"><img loading="lazy" src="assets/adlib/m2747705768765967_OjlJd2N4Lxw.jpeg" alt="Comparison hook, opening on the category rather than the product: Only 1 of these helped with hormonal weight AND hot flashes."><span class="tag">Video &middot; 412 days</span></div>
+      <div class="m"><div class="mwrap"><video src="assets/adlib/m2747705768765967_qljhXwEw2F0.mp4" poster="assets/adlib/m2747705768765967_OjlJd2N4Lxw.jpeg" controls preload="none" playsinline></video><span class="tag">Video &middot; 412 days</span></div>
         <div class="cap">Comparison hook, opening on the category rather than the product: "Only 1 of these helped with hormonal weight AND hot flashes."</div></div>
       <div class="m"><div class="mwrap"><img loading="lazy" src="assets/adlib/m1114763993647398_Q__l6pt42Xs.jpeg" alt="The outcome, made physical: 1 month in, I fit into my favourite jeans."><span class="tag">Static &middot; 411 days</span></div>
         <div class="cap">The outcome, made physical: "1 month in, I fit into my favourite jeans."</div></div>
@@ -207,12 +255,12 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
 
   <div class="case flag">
     <div class="case-head">
-      <div class="case-top"><h3>Women's Supplement Brand &mdash; Germany</h3><span class="cat">Flagship</span></div>
+      <div class="case-top"><h3>Women's Supplement Brand</h3><span class="cat">Flagship</span></div>
       <div class="role">My role &middot; Creative Strategist</div>
     </div>
     <div class="case-body">
-      <p>A women's supplement brand launching in Germany in a sensitive niche, where repeated Meta ad-account suspensions limited what could run. From day one I built a compliant, UGC-driven creative system: structured testing, clear angles, and policy-safe messaging that still sold. The brand passed &euro;2.2M in net sales.</p>
-      <p>The brand launched into Germany, but the creative system travelled better than the market did: the same angle set, translated and re-shot, ended up selling more in the <b>United States</b> than in the country it was built for. That is the argument for testing the message separately from the market &mdash; a winning angle is portable, a market is not.</p>
+      <p>A women's supplement brand in a sensitive niche, where repeated Meta ad-account suspensions limited what could run. From day one I built a compliant, UGC-driven creative system: structured testing, clear angles, and policy-safe messaging that still sold. The brand passed &euro;2.2M in net sales.</p>
+      <p>The brand tested in Europe first, but the creative system travelled better than the launch market did: the same angle set, re-shot and re-run, ended up selling more in the <b>United States</b> than in the market it was built for. That is the argument for testing the message separately from the market &mdash; a winning angle is portable, a market is not.</p>
       <p>Fifty-three campaigns were run across roughly &euro;362K of Meta spend. Statics and UGC video went out in parallel against the same angle set, so a winning message could be identified separately from the format carrying it, and angles were mapped against awareness and sophistication stage before anything was designed.</p>
     </div>
     <div class="stats">
@@ -297,10 +345,10 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
     </div>
     <div class="mech"><b>The angle:</b> the incumbent is coffee, not another nootropic. So the creative argues on calories, fat and dose, and borrows authority from where the target buyer already works.</div>
     <div class="media two">
-      <div class="m"><div class="mwrap"><img loading="lazy" src="assets/adlib/m961225957016756_zX9h5mNFZGU.jpeg" alt="Natural energy + focus &mdash; the comparison frame against coffee and energy drinks, cut for silent autoplay."><span class="tag">Video &middot; live</span></div>
+      <div class="m"><div class="mwrap"><video src="assets/adlib/m961225957016756_vvM_08CeIK4.mp4" poster="assets/adlib/m961225957016756_zX9h5mNFZGU.jpeg" controls preload="none" playsinline></video><span class="tag">Video &middot; live</span></div>
         <div class="cap">"Natural energy + focus" &mdash; the comparison frame against coffee and energy drinks, cut for silent autoplay.</div></div>
-      <div class="m"><div class="mwrap"><img loading="lazy" src="assets/adlib/m28331866029742594_7U16kUtLxzw.jpeg" alt="The same angle localised for a second market."><span class="tag">Static &middot; live</span></div>
-        <div class="cap">The same angle localised for a second market.</div></div>
+      <div class="m"><div class="mwrap"><img loading="lazy" src="assets/adlib/m28331866029742594_7U16kUtLxzw.jpeg" alt="Brite static from the live set, run to the brand's Lithuanian audience"><span class="tag">Static &middot; live</span></div>
+        <div class="cap">A static from the same live Brite set, running to the brand's Lithuanian audience. The angle and the layout are mine; the Lithuanian line was native-written before it went live.</div></div>
     </div>
     <div class="media two">
       <div class="m"><div class="mwrap"><video src="assets/v-nootropic-office.mp4" poster="assets/p-nootropic-office.jpg" controls preload="none" playsinline></video><span class="tag">Video</span></div>
@@ -391,7 +439,7 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
       <div class="stat"><div class="v">25&ndash;35s</div><div class="k">Length that carried it</div></div>
     </div>
     <div class="mech"><b>Why it worked:</b> on a subscription product the first order is a deposit, not the revenue. Judging creative on first-order ROAS kills ads that are buying four to six months of a customer. Hook rate and hold rate tell you whether the creative did its job, and the retention decides what that job was worth.</div>
-    <div class="mech"><b>The structure:</b> the angles do not run under the brand. They run creator-led, across separate persona pages and in both English and French, so the same argument can be tested against different messengers and markets without the brand account absorbing every test. The personas are written first, The Bleeder who has quietly hated shaving for ten years, the Permission-Seeker, the one who is only chasing the clean feeling, and the brief is built for the persona rather than the product.</div>
+    <div class="mech"><b>The structure:</b> the angles do not run under the brand. They run creator-led, across separate persona pages and in both English and French, so the same argument can be tested against different messengers and markets without the brand account absorbing every test. I built the personas, angles and briefs for both; the French copy was native-written to my direction. The personas are written first, The Bleeder who has quietly hated shaving for ten years, the Permission-Seeker, the one who is only chasing the clean feeling, and the brief is built for the persona rather than the product.</div>
     <div class="media three">
       <div class="m"><div class="mwrap"><img src="assets/hero-botane.jpg" alt="Botane before and after static, de poilu a lisse, sans rasage"><span class="tag">Static</span></div>
         <div class="cap">The before and after, run in French. <i>De poilu &agrave; lisse. Sans rasage.</i> The proof is the whole ad, and the product sits between the two states rather than on top of them.</div></div>
@@ -443,7 +491,7 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
     <div class="media two">
       <div class="m"><div class="mwrap"><img loading="lazy" src="assets/adlib/m1594712744565344_ZY5MVbA3L7U.jpeg" alt="The 383-day winner. Trusted by 50,000+ moms &amp; tweens does the reassuring; the icon row answers the practical objections."><span class="tag">Static &middot; 383 days</span></div>
         <div class="cap">The 383-day winner. "Trusted by 50,000+ moms &amp; tweens" does the reassuring; the icon row answers the practical objections.</div></div>
-      <div class="m"><div class="mwrap"><img loading="lazy" src="assets/adlib/m1106467954568689_8KeH-bkii8I.jpeg" alt="What Girls Need, Period. The line names the job rather than the product, which is why it outlasted the rebrand."><span class="tag">Video &middot; 381 days</span></div>
+      <div class="m"><div class="mwrap"><video src="assets/adlib/m1106467954568689_Xg8OvVyKCbg.mp4" poster="assets/adlib/m1106467954568689_8KeH-bkii8I.jpeg" controls preload="none" playsinline></video><span class="tag">Video &middot; 381 days</span></div>
         <div class="cap">"What Girls Need, Period." The line names the job rather than the product, which is why it outlasted the rebrand.</div></div>
     </div>
     <div class="media two">
@@ -496,7 +544,7 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
     <div class="media two">
       <div class="m"><div class="mwrap"><img loading="lazy" src="assets/adlib/m1154599558928710_4BILi7aglGE.jpeg" alt="Finally, a shaker that doesn't stink. The objection is the hook; the spec sheet and the lifetime warranty sit underneath it."><span class="tag">Static &middot; 389 days</span></div>
         <div class="cap">"Finally, a shaker that doesn't stink." The objection is the hook; the spec sheet and the lifetime warranty sit underneath it.</div></div>
-      <div class="m"><div class="mwrap"><img loading="lazy" src="assets/adlib/m1434549250572906_ah1woHZHacc.jpeg" alt="The microplastics angle &mdash; a health frame on a fitness accessory, which is what justifies the price gap."><span class="tag">Video &middot; 389 days</span></div>
+      <div class="m"><div class="mwrap"><video src="assets/adlib/m1434549250572906_ZZmBU1gK1PA.mp4" poster="assets/adlib/m1434549250572906_ah1woHZHacc.jpeg" controls preload="none" playsinline></video><span class="tag">Video &middot; 389 days</span></div>
         <div class="cap">The microplastics angle &mdash; a health frame on a fitness accessory, which is what justifies the price gap.</div></div>
     </div>
     <div class="media">
@@ -508,25 +556,6 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
 
 <section id="apparel">
   <h2>Apparel, footwear &amp; watches</h2>
-
-  <div class="case">
-    <div class="case-head"><h3>Vegan Sneaker Brand &mdash; Germany</h3><div class="role">My role &middot; Creative Strategist</div></div>
-    <div class="case-body">
-      <p>A sustainable vegan sneaker brand (cactus leather) sold into the German market. The strategy was to make sustainability concrete instead of vague. I led a benefits-led creative system in German &mdash; veganes Kaktusleder, leicht und bequem, nat&uuml;rliche rutschfeste Sohle, Fu&szlig;bett aus Bio-Baumwolle &mdash; turning each eco-claim into a tangible reason to buy for a values-driven shopper.</p>
-    </div>
-    <div class="stats">
-      <div class="stat"><div class="v">25&ndash;35%</div><div class="k">Hook rate target</div></div>
-      <div class="stat"><div class="v">8&ndash;12%</div><div class="k">Hold rate target</div></div>
-      <div class="stat"><div class="v">1.5%+</div><div class="k">CTR target</div></div>
-    </div>
-    <div class="mech"><b>The angle:</b> sustainability is a tiebreaker, not a purchase driver, so each eco-claim was converted into a benefit. Localised DE copy to protect relevance, CTR and CPC.</div>
-    <div class="media two">
-      <div class="m"><div class="mwrap"><img src="assets/hero-vegan-sneaker.jpg" alt="Vegan sneaker static with German benefit callouts on a cactus and cotton background"><span class="tag">Static</span></div>
-        <div class="cap">The material is shown, not asserted: the cactus and cotton are physically in frame with the product.</div></div>
-      <div class="m"><div class="mwrap"><video src="assets/v-apparel-jacket.mp4" poster="assets/p-apparel-jacket.jpg" controls preload="none" playsinline></video><span class="tag">Video</span></div>
-        <div class="cap">Product-detail video from the same apparel system, cut for silent autoplay.</div></div>
-    </div>
-  </div>
 
   <div class="case">
     <div class="case-head"><h3>Automatic Watch Brand</h3><div class="role">My role &middot; Creative Strategist</div></div>
@@ -577,19 +606,45 @@ footer{padding:34px 0;color:var(--mute);font-size:13px}
 
 <section id="background">
   <h2>Background</h2>
+  <p style="max-width:820px;margin:0 0 28px;font-size:17px">I did not arrive at creative strategy from design. I got here by owning the whole acquisition loop &mdash; offer, creative, funnel and the tracking that says which one actually worked &mdash; and then specialising in the part that moves the number most.</p>
   <div class="grid2">
-    <div>
-      <p><b>Scaled a coaching business (SteadyEcom) to $2M a year in net revenue</b>, owning the entire acquisition system end to end: offer and angle strategy, the direct-response creative, the copywriting, the email sequences, the webinar funnel and the ads attribution &mdash; so I read the numbers that say which creative actually drove revenue, not just the ones Ads Manager claims credit for.</p>
-      <p><b>Built and sold an AI marketing agency</b> (Avalanche AI), with clients including Wholesome Good.</p>
-      <p><b>Led a team of 70 at NexxAI</b> across marketing, creative strategy and AI.</p>
+    <div class="tl">
+      <div class="item">
+        <div class="lab">Full-stack growth</div>
+        <div class="hl">Scaled a coaching business to $2M a year</div>
+        <p>Steady Ecom, owned end to end: offer and angle strategy, the direct-response creative, the copywriting, the email sequences, the webinar funnel and the ads attribution. Owning the measurement as well as the creative is why I read the number that says which ad drove revenue, not the one Ads Manager claims credit for.</p>
+      </div>
+      <div class="item">
+        <div class="lab">Founder &middot; exit</div>
+        <div class="hl">Built and sold an AI marketing agency</div>
+        <p>Avalanche AI, serving 20+ DTC and consumer brands, acquired by Wholesome Goods in 2025 &mdash; the $200M/yr portfolio I now run creative across.</p>
+      </div>
+      <div class="item">
+        <div class="lab">Leadership</div>
+        <div class="hl">Led a team of 70 at NexxAI</div>
+        <p>Across marketing, creative strategy and AI, including enterprise adoption for 500+ people at Johnson &amp; Johnson, Novartis, LGT Bank and Orange.</p>
+      </div>
     </div>
-    <div>
-      <p><b>Past 5M views</b> on short-form and UGC for a supplement brand, converted to sales rather than left as reach. The hooks that earned the views were then ported straight into paid and became the top-of-funnel creative for the account, so the organic run doubled as a free hook-testing ground before a cent of spend went behind them.</p>
-      <p><b>Grew a wellness brand from 800 to 13,000 followers in six months</b> &mdash; 16&times; growth, fully organic, no paid boost and no follower buying. I owned the content strategy, the hooks and the posting cadence, and the audience became a warm retargeting pool and a UGC pipeline the paid account could sell into, which is the part a follower count on its own never tells you.</p>
-      <p><b>Compliance:</b> I write inside structure-and-function claims plus FTC and FDA rules. In health and wellness this is usually the difference between a campaign that compounds and an account that gets restricted.</p>
+    <div class="tl">
+      <div class="item">
+        <div class="lab">Organic &rarr; paid</div>
+        <div class="hl">5M+ views, used as a free hook-testing ground</div>
+        <p>Short-form and UGC for a supplement brand, converted to sales rather than left as reach. The hooks that earned the views were ported straight into paid and became the account's top-of-funnel creative &mdash; the organic run tested the openings before a cent of spend went behind them.</p>
+      </div>
+      <div class="item">
+        <div class="lab">Audience building</div>
+        <div class="hl">800 &rarr; 13,000 followers in six months</div>
+        <p>16&times; growth on a wellness brand, fully organic, no paid boost and no bought followers. I owned the content strategy, the hooks and the cadence. The audience became a warm retargeting pool and a UGC pipeline the paid account could sell into, which is the part a follower count never tells you.</p>
+      </div>
+      <div class="item">
+        <div class="lab">The constraint I specialise in</div>
+        <div class="hl">Compliance-first in restricted categories</div>
+        <p>I write inside structure-and-function claims plus FTC and FDA rules from the first draft. In hormones, weight, ED and anything Meta treats as sensitive, this is the difference between a campaign that compounds and an account that gets restricted &mdash; and it is why my winners run for a year instead of a fortnight.</p>
+      </div>
     </div>
   </div>
-  <div class="creds">
+  <div class="bgnote" style="margin-top:26px"><b>The through-line:</b> every long-running creative on this page came from the same loop &mdash; research the market's own language, write the angle before anything is designed, run message and format in parallel so they can be told apart, then read hook and hold rate against the business model rather than first-order ROAS.</div>
+  <div class="creds" style="margin-top:22px">
     <span class="chip">Meta Blueprint certified</span>
     <span class="chip">Evolve certified</span>
     <span class="chip">Ad Creative Academy certified</span>
